@@ -47,15 +47,5 @@ pipeline {
         }
       }     
   }
-
-  post {
-    
-    success {
-      echo 'Cool!'
-    }
-    failure {
-      echo 'Ups! Sorry'
-    }
-  }
   }
 } 
