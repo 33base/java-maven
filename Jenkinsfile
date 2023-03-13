@@ -27,7 +27,7 @@ pipeline {
 
   post {
     
-    succsess {
+    success {
       echo 'Cool!'
     }
     failure {
