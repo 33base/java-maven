@@ -1,17 +1,17 @@
-class MyApp {
-  def buildApp() {
-    println 'Building the application'
-  }
-
-  def testApp() {
-    println 'Testing the application'
-  }
-
-  def deployApp() {
-    println 'Deploying the application'
-    println "Deploying version ${params.VERSION}"
-  }
+def buildApp() {
+    echo 'building the aplication'
 }
 
-return new MyApp()
+return this 
 
+def testApp() {
+    echo 'testing the aplication'
+}
+
+return this 
+
+def deployApp() {
+    echo 'Hello learning jenkins is cool!!'
+    echo "deploying version ${params.VERSION}"
+
+return this 
