@@ -1,23 +1,28 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                // Define build steps here
-              echo "building the aplication..."
-            }
+
+  agent any
+
+  stages{
+
+      stage("build") {
+
+        steps{
+        echo 'building the aplication'
         }
-        stage('Test') {
-            steps {
-                // Define test steps here
-              echo "testing  the aplication..."
-            }
+      }
+
+      stage("test"){
+        steps{
+          echo 'testing the aplication'
         }
-        stage('Deploy') {
-            steps {
-                // Define deployment steps here
-              echo "deploying the aplication..."
-            }
+      }
+
+      stage ("deploy"){
+        steps{
+          echo 'learning jenkins'
         }
-    }
+      }
+      
+  }
+
 }
