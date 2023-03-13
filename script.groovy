@@ -1,15 +1,15 @@
 class MyApp {
   def buildApp() {
-    echo 'Building the application'
+    println 'Building the application'
   }
 
   def testApp() {
-    echo 'Testing the application'
+    println 'Testing the application'
   }
 
   def deployApp() {
-    echo 'Deploying the application'
-    echo "Deploying version ${params.VERSION}"
+    println 'Deploying the application'
+    println "Deploying version ${params.VERSION}"
   }
 }
 
