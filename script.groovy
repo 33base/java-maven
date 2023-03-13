@@ -1,17 +1,17 @@
-def buildApp() {
-    echo 'building the aplication'
+class MyApp {
+  def buildApp() {
+    echo 'Building the application'
+  }
+
+  def testApp() {
+    echo 'Testing the application'
+  }
+
+  def deployApp() {
+    echo 'Deploying the application'
+    echo "Deploying version ${params.VERSION}"
+  }
 }
 
-return this 
+return new MyApp()
 
-def testApp() {
-    echo 'testing the aplication'
-}
-
-return this 
-
-def deployApp() {
-    echo 'Hello learning jenkins is cool!!'
-    echo "deploying version ${params.VERSION}"
-
-return this 
