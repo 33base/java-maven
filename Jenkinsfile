@@ -3,6 +3,9 @@ pipeline {
   environment {
     NEW_VERSION = '1.4.0'
   }
+  parameters {
+    string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
+  }
   stages{
 
       stage("build") {
