@@ -1,6 +1,6 @@
 def gv
 
-ipeline {
+pipeline {
   agent any
   environment {
     NEW_VERSION = '1.4.0'
@@ -56,9 +56,7 @@ ipeline {
       echo 'Cool!'
     }
     failure {
-      echo 'Ups!'
+      echo 'Ups! Sorry'
     }
-
   }
-
 }
