@@ -19,7 +19,7 @@ pipeline {
 
       stage ("deploy"){
         steps{
-          echo 'learning jenkins'
+          echo 'Hello learning jenkins'
         }
       }
       
