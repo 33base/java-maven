@@ -4,7 +4,9 @@ pipeline {
     NEW_VERSION = '1.4.0'
   }
   parameters {
-    string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
+    
+    choise(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
+    booleanParam(name: 'executeTests', defaultValue: true, description: '')
   }
   stages{
 
@@ -17,6 +19,11 @@ pipeline {
       }
 
       stage("test"){
+        when {
+          expression {
+            params.executeTests == true
+          }
+        }
         
         steps{
           echo 'testing the aplication'
@@ -26,6 +33,7 @@ pipeline {
       stage ("deploy"){
         steps{
           echo 'Hello learning jenkins is cool!!'
+          echo "deploying version ${VERSION}"
         }
       }
       
