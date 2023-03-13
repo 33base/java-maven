@@ -1,4 +1,6 @@
-pipeline {
+def gv
+
+ipeline {
   agent any
   environment {
     NEW_VERSION = '1.4.0'
@@ -10,11 +12,19 @@ pipeline {
   }
   stages{
 
-      stage("build") {
-
+      stage("init") {      
         steps{
-        echo 'building the aplication'
-        echo "building the version ${NEW_VERSION}"
+          script{
+            gv = load "script.groovy"
+          }
+        } 
+      }
+
+      stage("build") {
+        steps{
+          script{
+            gv.buildApp()
+          }
         }
       }
 
@@ -26,17 +36,18 @@ pipeline {
         }
         
         steps{
-          echo 'testing the aplication'
+          script{
+            gv.testApp()
+          }
         }
       }
 
       stage ("deploy"){
         steps{
-          echo 'Hello learning jenkins is cool!!'
-          echo "deploying version ${VERSION}"
+          script{
+            gv.deployApp()
         }
-      }
-      
+      }     
   }
 
   post {
