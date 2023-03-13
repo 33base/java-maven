@@ -26,9 +26,14 @@ pipeline {
   }
 
   post {
-    always {
-      echo 'Finish'
+    
+    succsess {
+      echo 'Cool!'
     }
+    failure {
+      echo 'Ups!'
+    }
+
   }
 
 }
