@@ -30,7 +30,7 @@ pipeline {
             }
           }
         }
-      }
+      
     
 
       stage ("deploy"){
@@ -40,6 +40,6 @@ pipeline {
           }
         }     
       }
-
   }
 }
+
