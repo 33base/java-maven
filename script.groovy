@@ -11,9 +11,6 @@ def buildImage() {
             sh 'docker push 33base/myrepo:jma-2.0'
     }
 }
-def testApp() {
-    echo 'testing the aplication'
-}
 
 
 def deployApp() {
