@@ -9,8 +9,8 @@ def buildImage() {
             sh 'docker build -t 33base/myrepo:jma-2.0 .'
             sh "echo $PASS | docker login -u $USER --password-stdin"
             sh 'docker push 33base/myrepo:jma-2.0'
+    }
 }
-
 def testApp() {
     echo 'testing the aplication'
 }
